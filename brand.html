@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand — UMBRA LEACHIES</title>
+<link rel="icon" type="image/svg+xml" href="umbra-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Cormorant+Garamond:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#080D0E; --deep:#050809; --panel:#0C1615;
+    --jade:#2EE6A8; --pale:#6FF3C6; --slate:#5A736F;
+    --bone:#C4D6D2; --ochre:#C9A227; --line:#183430;
+    --display:"Cormorant Garamond",Georgia,serif;
+    --data:"IBM Plex Mono",ui-monospace,monospace;
+    --body:"Inter",system-ui,sans-serif;
+    --cal:"Ma Shan Zheng","Noto Serif CJK HK",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--ink);color:var(--bone);font-family:var(--body);
+       font-size:15px;line-height:1.62;padding:0 20px 76px}
+  .wrap{max-width:740px;margin:0 auto}
+
+  .hero{padding:84px 0 62px;text-align:center;border-bottom:1px solid var(--line)}
+  .hero .mk{width:132px;height:132px;margin:0 auto 38px;display:block}
+  .word2{font-family:var(--display);font-weight:400;font-size:clamp(20px,6vw,34px);letter-spacing:.42em;text-indent:.42em;color:var(--jade);margin-top:10px;opacity:.9}
+  .word{font-family:var(--display);font-weight:400;
+        font-size:clamp(44px,15vw,86px);line-height:.95;
+        letter-spacing:.3em;text-indent:.3em;color:var(--jade)}
+  .zh{font-family:var(--cal);font-size:clamp(46px,14vw,76px);line-height:1;
+      letter-spacing:.14em;text-indent:.14em;color:var(--pale);margin-top:26px;opacity:.92}
+  .desc{font-family:var(--data);font-size:10px;letter-spacing:.24em;
+        text-transform:uppercase;color:var(--slate);margin-top:26px}
+
+  section{padding:54px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{font-family:var(--data);font-size:9.5px;letter-spacing:.3em;
+           text-transform:uppercase;color:var(--jade);margin-bottom:18px}
+  h2{font-family:var(--display);font-weight:400;font-size:29px;
+     letter-spacing:.01em;color:var(--bone);margin-bottom:16px;line-height:1.2}
+  p{max-width:60ch}
+  p+p{margin-top:12px}
+  .muted{color:var(--slate)}
+  em{color:var(--pale);font-style:italic}
+
+  /* genetics device */
+  .gen{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+  .gen .cell{background:var(--deep);border:1px solid var(--line);padding:26px 18px;text-align:center}
+  .gen svg{width:62px;height:62px;margin-bottom:16px}
+  .gen .t{font-family:var(--display);font-size:19px;letter-spacing:.22em;
+          text-indent:.22em;color:var(--jade)}
+  .gen .zhg{font-family:var(--cal);font-size:26px;color:var(--pale);margin-top:6px;letter-spacing:.1em}
+  .gen .d{font-family:var(--data);font-size:9.5px;letter-spacing:.16em;
+          text-transform:uppercase;color:var(--slate);margin-top:9px}
+  .gen .x{font-size:12.5px;color:var(--bone);margin-top:12px;line-height:1.5}
+
+  .lockups{display:grid;gap:13px;margin-top:24px}
+  .lock{background:var(--deep);border:1px solid var(--line);padding:30px 22px;
+        display:flex;align-items:center;justify-content:center;gap:20px;min-height:120px}
+  .lock svg{flex:none}
+  .lock .nm{font-family:var(--display);letter-spacing:.3em;text-indent:.3em;
+            color:var(--jade);font-size:26px;line-height:1}
+  .lock .sub{font-family:var(--data);font-size:8px;letter-spacing:.22em;
+             text-transform:uppercase;color:var(--slate);margin-top:9px}
+  .cap{font-family:var(--data);font-size:9px;letter-spacing:.2em;
+       text-transform:uppercase;color:var(--slate);margin-top:9px}
+
+  .palette{display:grid;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));gap:9px;margin-top:24px}
+  .sw{border:1px solid var(--line)}
+  .sw .chip{height:58px}
+  .sw .meta{padding:9px 10px;background:var(--deep)}
+  .sw .n{font-size:12px}
+  .sw .h{font-family:var(--data);font-size:9.5px;color:var(--slate);margin-top:2px}
+
+  .spec{border-left:2px solid var(--jade);padding:2px 0 2px 18px;margin-top:24px}
+  .spec .role{font-family:var(--data);font-size:9px;letter-spacing:.22em;
+              text-transform:uppercase;color:var(--jade);margin-bottom:9px}
+  .s1{font-family:var(--display);font-size:34px;letter-spacing:.24em;color:var(--bone)}
+  .s2{font-family:var(--data);font-size:14px;color:var(--bone);letter-spacing:.03em}
+  .s3{font-size:15px;color:var(--bone)}
+  .note{font-size:12.5px;color:var(--slate);margin-top:9px}
+
+  .label{background:var(--deep);border:1px solid var(--line);padding:17px 19px;
+         display:flex;gap:15px;align-items:flex-start;margin-top:14px}
+  .label svg{width:34px;height:34px;flex:none;margin-top:3px}
+  .label .id{font-family:var(--data);font-size:11.5px;color:var(--jade);letter-spacing:.1em}
+  .label .lin{font-size:13.5px;margin-top:5px;line-height:1.45}
+  .label .m{font-family:var(--data);font-size:9.5px;color:var(--slate);
+            margin-top:8px;letter-spacing:.06em}
+  .label .b{font-family:var(--display);font-size:11px;letter-spacing:.4em;
+            color:var(--ochre);margin-top:11px}
+
+  footer{padding:46px 0 0;text-align:center}
+  footer div{font-family:var(--data);font-size:9px;letter-spacing:.26em;
+             text-transform:uppercase;color:var(--slate)}
+  @media (max-width:430px){ .gen{grid-template-columns:1fr} }
+.topnav{display:flex;align-items:center;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .topnav .tb{font-family:var(--display);font-size:13px;letter-spacing:.3em;color:var(--jade)}
+  .topnav .tz{font-family:var(--cal);font-size:17px;color:var(--pale)}
+  .topnav nav{margin-left:auto;display:flex;gap:18px}
+  .topnav nav a{font-family:var(--data);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);text-decoration:none}
+  .topnav nav a.on{color:var(--pale)}
+  /* label samples now match the printed light-stock design */
+  .label{background:#FBFAF7;border:1px solid #C9D2CE;padding:17px 19px;display:flex;gap:15px;align-items:flex-start;margin-top:14px}
+  .label .id{font-family:var(--data);font-size:11.5px;color:#0B6B4F;letter-spacing:.1em;font-weight:700}
+  .label .lin{font-size:13.5px;margin-top:5px;line-height:1.45;color:#14201D;font-weight:600}
+  .label .m{font-family:var(--data);font-size:9.5px;color:#4A5551;margin-top:8px;letter-spacing:.06em;font-weight:600}
+  .label .b{font-family:var(--display);font-size:11px;letter-spacing:.4em;color:#8A6A12;margin-top:11px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="topnav"><span class="tb">UMBRA LEACHIES</span><span class="tz">玄影</span><nav><a href="./index.html">Home</a><a href="./records.html">Records</a><a href="./available.html">Available</a><a href="./brand.html" class="on">Brand</a></nav></div>
+
+<div class="hero">
+  <svg class="mk" viewBox="0 0 200 200" aria-label="Umbra Leachies mark"><g stroke="#2EE6A8" stroke-width="1.2" stroke-linecap="round">
+      <line x1="100" y1="67" x2="100" y2="25.6" opacity="0.5"/><line x1="104.7" y1="67.3" x2="109.1" y2="37.3" opacity="0.3"/>
+      <line x1="109.3" y1="68.3" x2="119.9" y2="27.9" opacity="0.5"/><line x1="113.7" y1="69.9" x2="127.7" y2="41" opacity="0.3"/>
+      <line x1="117.9" y1="72.1" x2="139.4" y2="33.9" opacity="0.5"/><line x1="121.7" y1="74.9" x2="141.5" y2="49.7" opacity="0.3"/>
+      <line x1="125.1" y1="78.3" x2="152.6" y2="47.6" opacity="0.5"/><line x1="127.9" y1="82.1" x2="150.1" y2="63.4" opacity="0.3"/>
+      <line x1="130.1" y1="86.3" x2="167.2" y2="70.5" opacity="0.5"/><line x1="131.7" y1="90.7" x2="160.9" y2="80" opacity="0.3"/>
+      <line x1="132.7" y1="95.3" x2="172.4" y2="92" opacity="0.5"/><line x1="133" y1="100" x2="162" y2="100" opacity="0.3"/>
+      <line x1="132.7" y1="104.7" x2="172.4" y2="108" opacity="0.5"/><line x1="131.7" y1="109.3" x2="160.9" y2="120" opacity="0.3"/>
+      <line x1="130.1" y1="113.7" x2="167.2" y2="129.5" opacity="0.5"/><line x1="127.9" y1="117.9" x2="150.1" y2="136.6" opacity="0.3"/>
+      <line x1="125.1" y1="121.7" x2="152.6" y2="152.4" opacity="0.5"/><line x1="121.7" y1="125.1" x2="141.5" y2="150.3" opacity="0.3"/>
+      <line x1="117.9" y1="127.9" x2="139.4" y2="166.1" opacity="0.5"/><line x1="113.7" y1="130.1" x2="127.7" y2="159" opacity="0.3"/>
+      <line x1="109.3" y1="131.7" x2="119.9" y2="172.1" opacity="0.5"/><line x1="104.7" y1="132.7" x2="109.1" y2="162.7" opacity="0.3"/>
+      <line x1="100" y1="133" x2="100" y2="174.4" opacity="0.5"/><line x1="95.3" y1="132.7" x2="90.9" y2="162.7" opacity="0.3"/>
+      <line x1="90.7" y1="131.7" x2="80.1" y2="172.1" opacity="0.5"/><line x1="86.3" y1="130.1" x2="72.3" y2="159" opacity="0.3"/>
+      <line x1="82.1" y1="127.9" x2="60.6" y2="166.1" opacity="0.5"/><line x1="78.3" y1="125.1" x2="58.5" y2="150.3" opacity="0.3"/>
+      <line x1="74.9" y1="121.7" x2="47.4" y2="152.4" opacity="0.5"/><line x1="72.1" y1="117.9" x2="49.9" y2="136.6" opacity="0.3"/>
+      <line x1="69.9" y1="113.7" x2="32.8" y2="129.5" opacity="0.5"/><line x1="68.3" y1="109.3" x2="39.1" y2="120" opacity="0.3"/>
+      <line x1="67.3" y1="104.7" x2="27.6" y2="108" opacity="0.5"/><line x1="67" y1="100" x2="38" y2="100" opacity="0.3"/>
+      <line x1="67.3" y1="95.3" x2="27.6" y2="92" opacity="0.5"/><line x1="68.3" y1="90.7" x2="39.1" y2="80" opacity="0.3"/>
+      <line x1="69.9" y1="86.3" x2="32.8" y2="70.5" opacity="0.5"/><line x1="72.1" y1="82.1" x2="49.9" y2="63.4" opacity="0.3"/>
+      <line x1="74.9" y1="78.3" x2="47.4" y2="47.6" opacity="0.5"/><line x1="78.3" y1="74.9" x2="58.5" y2="49.7" opacity="0.3"/>
+      <line x1="82.1" y1="72.1" x2="60.6" y2="33.9" opacity="0.5"/><line x1="86.3" y1="69.9" x2="72.3" y2="41" opacity="0.3"/>
+      <line x1="90.7" y1="68.3" x2="80.1" y2="27.9" opacity="0.5"/><line x1="95.3" y1="67.3" x2="90.9" y2="37.3" opacity="0.3"/>
+    </g>
+    <circle cx="100" cy="100" r="84" fill="none" stroke="#2EE6A8" stroke-width="3.4"/>
+    <line x1="100" y1="41" x2="100" y2="159" stroke="#2EE6A8" stroke-width="1.6"/>
+    <g fill="#2EE6A8">
+      <path d="M100 40.2 L103.2 46 L100 51.8 L96.8 46 Z"/>
+      <path d="M100 52.7 L105 59.5 L100 66.3 L95 59.5 Z"/>
+      <path d="M100 65.6 L106.4 73 L100 80.4 L93.6 73 Z"/>
+      <path d="M100 78.7 L107.4 86.5 L100 94.3 L92.6 86.5 Z"/>
+      <path d="M100 92 L108 100 L100 108 L92 100 Z"/>
+      <path d="M100 105.7 L107.4 113.5 L100 121.3 L92.6 113.5 Z"/>
+      <path d="M100 119.6 L106.4 127 L100 134.4 L93.6 127 Z"/>
+      <path d="M100 133.7 L105 140.5 L100 147.3 L95 140.5 Z"/>
+      <path d="M100 148.2 L103.2 154 L100 159.8 L96.8 154 Z"/>
+    </g></svg>
+  <div class="word">UMBRA</div>
+  <div class="word2">LEACHIES</div>
+  <div class="zh">玄影</div>
+  <div class="desc">Rhacodactylus leachianus · Hong Kong · Melanistic project</div>
+</div>
+
+<section>
+  <div class="eyebrow">The name</div>
+  <h2>The part of a shadow where the light is gone completely.</h2>
+  <p>In astronomy a shadow has two regions. The <em>umbra</em> is the core, where the light source is entirely blocked. Around it lies the <em>penumbra</em>, where the blocking is partial and some light still falls.</p>
+  <p class="muted">Melanism in leachianus is a simple recessive. An animal either shows it or carries it. The vocabulary already existed — it just happened to be sitting in a different discipline.</p>
+  <p class="muted">In Chinese the same two regions are 本影 and 半影, which is what the genetics gets called here. The house name is 玄影 — 玄 being the old word for a black so deep it reads as unfathomable rather than merely dark.</p>
+
+  <div class="gen">
+    <div class="cell">
+      <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="82" fill="none" stroke="#2EE6A8" stroke-width="9"/><line x1="100" y1="40" x2="100" y2="160" stroke="#2EE6A8" stroke-width="2.6"/><g fill="#2EE6A8"><path d="M100 39.8 L103.6 46 L100 52.2 L96.4 46 Z"/><path d="M100 52.3 L105.6 59.5 L100 66.7 L94.4 59.5 Z"/><path d="M100 65.2 L107.2 73 L100 80.8 L92.8 73 Z"/><path d="M100 78.3 L108.4 86.5 L100 94.7 L91.6 86.5 Z"/><path d="M100 91.6 L109 100 L100 108.4 L91 100 Z"/><path d="M100 105.3 L108.4 113.5 L100 121.7 L91.6 113.5 Z"/><path d="M100 119.2 L107.2 127 L100 134.8 L92.8 127 Z"/><path d="M100 133.3 L105.6 140.5 L100 147.7 L94.4 140.5 Z"/><path d="M100 147.8 L103.6 154 L100 160.2 L96.4 154 Z"/></g></svg>
+      <div class="t">UMBRA</div>
+      <div class="zhg">本影</div>
+      <div class="d">Visual melanistic</div>
+      <div class="x">Two copies. The trait is expressed.</div>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="82" fill="none" stroke="#2EE6A8" stroke-width="4"/><line x1="100" y1="40" x2="100" y2="160" stroke="#2EE6A8" stroke-width="2.6"/><g fill="none" stroke="#2EE6A8" stroke-width="3.4"><path d="M100 39.8 L103.6 46 L100 52.2 L96.4 46 Z"/><path d="M100 52.3 L105.6 59.5 L100 66.7 L94.4 59.5 Z"/><path d="M100 65.2 L107.2 73 L100 80.8 L92.8 73 Z"/><path d="M100 78.3 L108.4 86.5 L100 94.7 L91.6 86.5 Z"/><path d="M100 91.6 L109 100 L100 108.4 L91 100 Z"/><path d="M100 105.3 L108.4 113.5 L100 121.7 L91.6 113.5 Z"/><path d="M100 119.2 L107.2 127 L100 134.8 L92.8 127 Z"/><path d="M100 133.3 L105.6 140.5 L100 147.7 L94.4 140.5 Z"/><path d="M100 147.8 L103.6 154 L100 160.2 L96.4 154 Z"/></g></svg>
+      <div class="t">PENUMBRA</div>
+      <div class="zhg">半影</div>
+      <div class="d">Het for melanistic</div>
+      <div class="x">One copy. Carried, not shown.</div>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:20px;font-size:13px">Same eye, two pupils. Filled for an animal that shows the trait, hollow for one that only carries it. On a listing or an enclosure label, which one is printed tells a buyer the genetics before they read a word.</p>
+</section>
+
+<section>
+  <div class="eyebrow">The mark</div>
+  <h2>A pupil in total darkness.</h2>
+  <p>Nocturnal geckos do not have round pupils. In light the slit closes into a vertical chain of separate pinholes, each projecting its own image onto the retina. It is the most specific thing about how this animal looks at you, and almost nobody draws it.</p>
+  <p class="muted">The iris is drawn as fine radial fibres of uneven length, the way a leachianus iris is actually veined. A symmetrical starburst would have been decoration.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Lockups</div>
+  <h2>Three configurations.</h2>
+  <div class="lockups">
+    <div>
+      <div class="lock">
+        <svg viewBox="0 0 200 200" width="46" height="46"><circle cx="100" cy="100" r="82" fill="none" stroke="#2EE6A8" stroke-width="9"/><line x1="100" y1="40" x2="100" y2="160" stroke="#2EE6A8" stroke-width="2.6"/><g fill="#2EE6A8"><path d="M100 39.8 L103.6 46 L100 52.2 L96.4 46 Z"/><path d="M100 52.3 L105.6 59.5 L100 66.7 L94.4 59.5 Z"/><path d="M100 65.2 L107.2 73 L100 80.8 L92.8 73 Z"/><path d="M100 78.3 L108.4 86.5 L100 94.7 L91.6 86.5 Z"/><path d="M100 91.6 L109 100 L100 108.4 L91 100 Z"/><path d="M100 105.3 L108.4 113.5 L100 121.7 L91.6 113.5 Z"/><path d="M100 119.2 L107.2 127 L100 134.8 L92.8 127 Z"/><path d="M100 133.3 L105.6 140.5 L100 147.7 L94.4 140.5 Z"/><path d="M100 147.8 L103.6 154 L100 160.2 L96.4 154 Z"/></g></svg>
+        <div style="text-align:left">
+          <div class="nm" style="font-size:22px">UMBRA</div>
+          <div class="nm" style="font-size:13px;letter-spacing:.44em;text-indent:.44em;margin-top:5px">LEACHIES</div>
+          <div class="sub">Hong Kong</div>
+        </div>
+      </div>
+      <div class="cap">Horizontal — site header, invoices, email</div>
+    </div>
+    <div>
+      <div class="lock">
+        <div style="text-align:center">
+          <div class="nm" style="font-size:20px">UMBRA LEACHIES</div>
+          <div style="font-family:var(--cal);font-size:34px;letter-spacing:.12em;text-indent:.12em;color:var(--pale);margin-top:10px;line-height:1">玄影</div>
+        </div>
+      </div>
+      <div class="cap">Bilingual stack — local listings, shipping tape</div>
+    </div>
+    <div>
+      <div class="lock" style="gap:26px">
+        <svg viewBox="0 0 200 200" width="62" height="62"><circle cx="100" cy="100" r="82" fill="none" stroke="#2EE6A8" stroke-width="9"/><line x1="100" y1="40" x2="100" y2="160" stroke="#2EE6A8" stroke-width="2.6"/><g fill="#2EE6A8"><path d="M100 39.8 L103.6 46 L100 52.2 L96.4 46 Z"/><path d="M100 52.3 L105.6 59.5 L100 66.7 L94.4 59.5 Z"/><path d="M100 65.2 L107.2 73 L100 80.8 L92.8 73 Z"/><path d="M100 78.3 L108.4 86.5 L100 94.7 L91.6 86.5 Z"/><path d="M100 91.6 L109 100 L100 108.4 L91 100 Z"/><path d="M100 105.3 L108.4 113.5 L100 121.7 L91.6 113.5 Z"/><path d="M100 119.2 L107.2 127 L100 134.8 L92.8 127 Z"/><path d="M100 133.3 L105.6 140.5 L100 147.7 L94.4 140.5 Z"/><path d="M100 147.8 L103.6 154 L100 160.2 L96.4 154 Z"/></g></svg>
+        <svg viewBox="0 0 200 200" width="34" height="34"><circle cx="100" cy="100" r="82" fill="none" stroke="#2EE6A8" stroke-width="11"/><line x1="100" y1="40" x2="100" y2="160" stroke="#2EE6A8" stroke-width="2.6"/><g fill="#2EE6A8"><path d="M100 39.8 L103.6 46 L100 52.2 L96.4 46 Z"/><path d="M100 52.3 L105.6 59.5 L100 66.7 L94.4 59.5 Z"/><path d="M100 65.2 L107.2 73 L100 80.8 L92.8 73 Z"/><path d="M100 78.3 L108.4 86.5 L100 94.7 L91.6 86.5 Z"/><path d="M100 91.6 L109 100 L100 108.4 L91 100 Z"/><path d="M100 105.3 L108.4 113.5 L100 121.7 L91.6 113.5 Z"/><path d="M100 119.2 L107.2 127 L100 134.8 L92.8 127 Z"/><path d="M100 133.3 L105.6 140.5 L100 147.7 L94.4 140.5 Z"/><path d="M100 147.8 L103.6 154 L100 160.2 L96.4 154 Z"/></g></svg>
+      </div>
+      <div class="cap">Icon — avatar, favicon (iris fibres dropped, pupil thickened)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Palette</div>
+  <h2>One green, one exception.</h2>
+  <p class="muted">The animals are black and they are photographed at night. Ochre appears on provenance only — registry numbers, breeder credits, hatch certificates — because it is the one colour a melanistic leachianus still shows in its reticulation.</p>
+  <div class="palette">
+    <div class="sw"><div class="chip" style="background:#080D0E"></div><div class="meta"><div class="n">Ink</div><div class="h">#080D0E</div></div></div>
+    <div class="sw"><div class="chip" style="background:#050809"></div><div class="meta"><div class="n">Deep</div><div class="h">#050809</div></div></div>
+    <div class="sw"><div class="chip" style="background:#2EE6A8"></div><div class="meta"><div class="n">Jade</div><div class="h">#2EE6A8</div></div></div>
+    <div class="sw"><div class="chip" style="background:#6FF3C6"></div><div class="meta"><div class="n">Pale Jade</div><div class="h">#6FF3C6</div></div></div>
+    <div class="sw"><div class="chip" style="background:#C4D6D2"></div><div class="meta"><div class="n">Bone</div><div class="h">#C4D6D2</div></div></div>
+    <div class="sw"><div class="chip" style="background:#C9A227"></div><div class="meta"><div class="n">Ochre</div><div class="h">#C9A227</div></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Typography</div>
+  <h2>A plate face and a ledger face.</h2>
+  <div class="spec">
+    <div class="role">Display — Cormorant Garamond 400, tracked +300</div>
+    <div class="s1">UMBRA</div><div class="s1" style="font-size:19px;letter-spacing:.44em">LEACHIES</div>
+    <div class="note">Two words, two tracking values. UMBRA is set wide enough to be mostly space; LEACHIES sits under it, smaller and wider still, so the eye reads the shorter word first.</div>
+  </div>
+  <div class="spec">
+    <div class="role">Chinese — Ma Shan Zheng, running hand</div>
+    <div style="font-family:var(--cal);font-size:52px;color:var(--bone);letter-spacing:.1em;line-height:1.1">玄影</div>
+    <div class="note">Set in a running-hand brush face, never in a printing face. The two characters appear at display size or not at all — shrunk into a caption the strokes collapse.</div>
+  </div>
+  <div class="spec">
+    <div class="role">Data — IBM Plex Mono 400</div>
+    <div class="s2">LCH-01 · 1.0 · H 2023-09-14 · 167 g · MM 2127896</div>
+    <div class="note">This brand's credibility is its records. IDs, hatch dates, weights and registry numbers get their own face, and it appears on every label and listing.</div>
+  </div>
+  <div class="spec">
+    <div class="role">Body — Inter 400</div>
+    <div class="s3">Bred to a non-melanistic female, the entire clutch carries it.</div>
+    <div class="note">Quiet, neutral, sized for reading on a phone.</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Applications</div>
+  <h2>Where it earns its keep.</h2>
+  <p class="muted">The masking tape works. This is the same information, in a form a buyer can photograph. Printed on light stock — the dark version did not survive a laser printer.</p>
+
+  <div class="label">
+    <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="82" fill="none" stroke="#0B6B4F" stroke-width="10"/><line x1="100" y1="40" x2="100" y2="160" stroke="#0B6B4F" stroke-width="2.6"/><g fill="#0B6B4F"><path d="M100 39.8 L103.6 46 L100 52.2 L96.4 46 Z"/><path d="M100 52.3 L105.6 59.5 L100 66.7 L94.4 59.5 Z"/><path d="M100 65.2 L107.2 73 L100 80.8 L92.8 73 Z"/><path d="M100 78.3 L108.4 86.5 L100 94.7 L91.6 86.5 Z"/><path d="M100 91.6 L109 100 L100 108.4 L91 100 Z"/><path d="M100 105.3 L108.4 113.5 L100 121.7 L91.6 113.5 Z"/><path d="M100 119.2 L107.2 127 L100 134.8 L92.8 127 Z"/><path d="M100 133.3 L105.6 140.5 L100 147.7 L94.4 140.5 Z"/><path d="M100 147.8 L103.6 154 L100 160.2 L96.4 154 Z"/></g></svg>
+    <div>
+      <div class="id">LCH-01 · 1.0 · UMBRA</div>
+      <div class="lin">Friedel Koghis × Nord Line<br>MTK × GT Type A × Melanistic × Friedel</div>
+      <div class="m">LAID 2023-06-27 · HATCHED 2023-09-14 · MM 2127896</div>
+      <div class="b">UMBRA LEACHIES · 玄影</div>
+    </div>
+  </div>
+
+  <div class="label">
+    <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="82" fill="none" stroke="#0B6B4F" stroke-width="5"/><line x1="100" y1="40" x2="100" y2="160" stroke="#0B6B4F" stroke-width="2.6"/><g fill="none" stroke="#0B6B4F" stroke-width="3.6"><path d="M100 39.8 L103.6 46 L100 52.2 L96.4 46 Z"/><path d="M100 52.3 L105.6 59.5 L100 66.7 L94.4 59.5 Z"/><path d="M100 65.2 L107.2 73 L100 80.8 L92.8 73 Z"/><path d="M100 78.3 L108.4 86.5 L100 94.7 L91.6 86.5 Z"/><path d="M100 91.6 L109 100 L100 108.4 L91 100 Z"/><path d="M100 105.3 L108.4 113.5 L100 121.7 L91.6 113.5 Z"/><path d="M100 119.2 L107.2 127 L100 134.8 L92.8 127 Z"/><path d="M100 133.3 L105.6 140.5 L100 147.7 L94.4 140.5 Z"/><path d="M100 147.8 L103.6 154 L100 160.2 L96.4 154 Z"/></g></svg>
+    <div>
+      <div class="id">C-2026-01 · INFERTILE</div>
+      <div class="lin">Clutch record — LL Pure Caanawa</div>
+      <div class="m">DAM LCH-03 · SIRE — · LAID 2026-07-04 · SLUGS, NOT INCUBATED</div>
+      <div class="b">UMBRA LEACHIES · 玄影</div>
+    </div>
+  </div>
+</section>
+
+<footer><div style="font-family:var(--cal);font-size:30px;color:var(--pale);letter-spacing:.12em;margin-bottom:12px">玄影</div><div>UMBRA LEACHIES · HONG KONG</div></footer>
+
+</div>
+</body>
+</html>
